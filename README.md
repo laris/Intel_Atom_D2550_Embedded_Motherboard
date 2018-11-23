@@ -1,0 +1,1 @@
+# Intel_Atom_D2550_Motherboard
