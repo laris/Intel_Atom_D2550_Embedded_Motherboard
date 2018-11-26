@@ -82,6 +82,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="gma500_gfx.blacklist=yes"
 
 ## TE7075M
 * PCBA: TE7075M
+* [Vendor public datasheet - TopStar-M7075-SPEC](TopStar-M7075-SPEC.md)
 ### IT87 TTL map to RS232
 ![IT87 TTL map to RS232](img/D2550-IT87-TTL-map-RS232-MAX3243E.png)
 ```
