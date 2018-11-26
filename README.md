@@ -58,6 +58,7 @@ Intel 64|Yes
 ### BIOS
 ### Check MSR config
 * Refer post
+![D2550 64-bit and VTx No](img/D2550_VTX_NO.jpg)
 ### IDA reverse engineering 
 ### Phonix packaging 
 ### Program/Flash BIOS
