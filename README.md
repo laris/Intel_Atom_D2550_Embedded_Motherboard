@@ -48,11 +48,11 @@ Intel 64|Yes
     ![](img/ATX_PINOUT_24P_4P.png)
 * ATX 12v 2 x 4
 ### Peripherals 
-* ITE 87
+* IT87 [IT8786E-I Datasheet](ds_it87_rs232/IT8786E.pdf)
+* Serial/RS232 [MF243/MAX3243E](ds_it87_rs232/RS232_max3243e.pdf)
+* LPT port
 * USB 2.0
 * USB 3.0
-* Serial port
-* LPT port
 
 ## Hack BIOS to enable 64-bit x86_64 OS support
 ### BIOS
