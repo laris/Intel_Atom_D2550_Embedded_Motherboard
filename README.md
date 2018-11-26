@@ -73,8 +73,12 @@ Intel 64|Yes
 * PCBA: TE7075M
 
 ## M7072
-* PCBA:
-* BIOS: SD-M7072-J
 * System Spec/Manual: [TBE-M7072](TopStar-M7072-SPEC.md)
+* PCBA image
+![M7072-USB3-1](img/M7072_IMG_3025_small.jpg)
+[M7072-USB3-1_Large](img/M7072_IMG_3025.jpg)
+![M7072-USB3-2](img/M7072_IMG_3026_small.jpg)
+[M7072-USB3-2_Large](img/M7072_IMG_3026.jpg)
+* BIOS: SD-M7072-J
 
 
