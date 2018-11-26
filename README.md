@@ -66,6 +66,17 @@ Intel 64|Yes
 ## OS
 ### Grub black screen issue
 ### Linux black screen issue
+```
+Need root
+$ sudo su - root
+# change /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="gma500_gfx.blacklist=yes"
+# update-grub
+
+# echo "blacklist gma500_gfx" >> /etc/modprobe.d/blacklist-gma500_gfx.conf
+# update-initramfs -u
+# reboot
+```
 ### OpenWRT x86_64 installation 
 ### Synology DSM
 
@@ -156,7 +167,7 @@ DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8181/6E	PIN
     [    2.309848] 00:09: ttyS2 at I/O 0x3e8 (irq = 7, base_baud = 115200) is a 16550A
     [    2.331125] 00:0a: ttyS3 at I/O 0x2e8 (irq = 7, base_baud = 115200) is a 16550A
     [    2.352379] 00:0b: ttyS4 at I/O 0x2f0 (irq = 7, base_baud = 115200) is a 16550A
-    
+
     [    0.000000] Console: colour dummy device 80x25
     [    0.000000] console [tty0] enabled
     [    2.246171] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
@@ -165,15 +176,15 @@ DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8181/6E	PIN
     [    2.309848] 00:09: ttyS2 at I/O 0x3e8 (irq = 7, base_baud = 115200) is a 16550A
     [    2.331125] 00:0a: ttyS3 at I/O 0x2e8 (irq = 7, base_baud = 115200) is a 16550A
     [    2.352379] 00:0b: ttyS4 at I/O 0x2f0 (irq = 7, base_baud = 115200) is a 16550A
-    
-    
+
+
     [    2.364746] ata_piix 0000:00:1f.2: version 2.13
     [    2.364980] ata_piix 0000:00:1f.2: MAP [ P0 P2 P1 P3 ]
     [    2.524903] scsi host0: ata_piix
     [    2.525408] scsi host1: ata_piix
     [    2.525676] ata1: SATA max UDMA/133 cmd 0xf0e0 ctl 0xf0d0 bmdma 0xf0a0 irq 19
     [    2.526017] ata2: SATA max UDMA/133 cmd 0xf0c0 ctl 0xf0b0 bmdma 0xf0a8 irq 19
-    
+
     [    2.698279] ata1.00: supports DRM functions and may not be fully accessible
     [    2.698286] ata1.00: ATA-9: Samsung SSD 850 EVO 250GB, EMT01B6Q, max UDMA/133
     [    2.698289] ata1.00: 488397168 sectors, multi 1: LBA48 NCQ (depth 0/32)
@@ -188,8 +199,8 @@ DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8181/6E	PIN
     [    2.708068]  sda: sda1
     [    2.710595] sd 0:0:0:0: [sda] supports TCG Opal
     [    2.710600] sd 0:0:0:0: [sda] Attached SCSI disk
-    
-    
+
+
     [    4.376056] scsi host2: ahci
     [    4.377028] input: Dell Dell USB Keyboard as /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1:1.0/0003:413C:2105.0001/input/input6
     [    4.411377] scsi host3: ahci
@@ -216,7 +227,7 @@ DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8181/6E	PIN
     [    5.007524] sd 0:0:0:0: [sda] supports TCG Opal
     [    5.007530] sd 0:0:0:0: [sda] Attached SCSI disk
     [    5.446345] ata2: SATA link down (SStatus 0 SControl 300)
-    
+
     ```
 
 ## M7072
