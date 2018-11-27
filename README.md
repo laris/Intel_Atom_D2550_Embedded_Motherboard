@@ -84,9 +84,14 @@ GRUB_CMDLINE_LINUX_DEFAULT="gma500_gfx.blacklist=yes"
 * PCBA: TE7075M
 * [Vendor public datasheet - TopStar-M7075-SPEC](TopStar-M7075-SPEC.md)
 * [Heatsink small factor](Hestsink-small-factor-taobao.md)
+### BIOS SPI flash
+[SPI flash MX25L1606E](ds_it87_rs232/MX25L1606E.pdf)
 ### IT87 TTL map to RS232
 ![IT87 TTL map to RS232](img/D2550-IT87-TTL-map-RS232-MAX3243E.png)
 ```
+GND 3/20/24
+VCC5V 10
+
 MAX3243E CHIP-1
 DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8186E	PIN
 	RS232		TTL
@@ -235,10 +240,15 @@ DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8181/6E	PIN
 ## M7072
 * System Spec/Manual: [TBE-M7072](TopStar-M7072-SPEC.md)
 * PCBA image
+
 ![M7072-USB3-1](img/M7072_IMG_3025_small.jpg)
+
 [M7072-USB3-1_Large](img/M7072_IMG_3025.jpg)
+
 ![M7072-USB3-2](img/M7072_IMG_3026_small.jpg)
+
 [M7072-USB3-2_Large](img/M7072_IMG_3026.jpg)
+
 * BIOS: SD-M7072-J
 
 
