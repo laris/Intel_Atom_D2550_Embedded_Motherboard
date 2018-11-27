@@ -54,6 +54,14 @@ Intel 64|Yes
 * USB 2.0
 * USB 3.0
 
+## Tools
+[tools](tools)
+* AFU DOS v3.07.01
+* BITS v2079
+* Phoenixtool v273
+* Rufus 3.1p
+* Securable
+
 ## Hack BIOS to enable 64-bit x86_64 OS support
 ### BIOS
 ### Check MSR config
