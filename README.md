@@ -57,6 +57,7 @@ Intel 64|Yes
 ## Tools
 [tools](tools)
 * AFU DOS v3.07.01
+    * [AFU DOS HELP CN](AFUDOS_CN.md)
 * BITS v2079
 * Phoenixtool v273
 * Rufus 3.1p
