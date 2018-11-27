@@ -2,7 +2,6 @@ Below URL are obsolete now.
 
 MB http://www.topstartech.cn/Product01.aspx?product_id=N0238&top_id=M00038&menu_id=M00040
 TEB-M7075-1
-![M7075 MB](img/Topstar-mb-01-201311231135433907273.jpg)
 http://www.topstartech.cn/Product01.aspx?product_id=N0213&top_id=M00038&menu_id=M00040
 TEB-M7273
 
