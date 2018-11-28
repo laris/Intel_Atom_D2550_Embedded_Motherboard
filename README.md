@@ -71,7 +71,76 @@ Intel 64|Yes
 ### IDA reverse engineering 
 ### Phonix packaging 
 ### Program/Flash BIOS
+* Flashrom version
+```
+~ brew info flashrom
+flashrom: stable 1.0 (bottled), HEAD
+Identify, read, write, verify, and erase flash chips
+https://flashrom.org/
+/usr/local/Cellar/flashrom/1.0 (6 files, 470.1KB) *
+  Poured from bottle on 2018-07-17 at 21:10:38
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/flashrom.rb
+==> Dependencies
+Build: pkg-config ✔
+Required: libftdi0 ✔, libusb-compat ✔
+==> Options
+--HEAD
+	Install HEAD version
+==> Analytics
+install: 105 (30 days), 263 (90 days), 871 (365 days)
+install_on_request: 106 (30 days), 263 (90 days), 815 (365 days)
+build_error: 0 (30 days)
+```
+* Flashrom help
+```
+~ flashrom -h
+flashrom v1.0 on Darwin 18.2.0 (x86_64)
+flashrom is free software, get the source code at https://flashrom.org
 
+Please note that the command line interface for flashrom has changed between
+0.9.5 and 0.9.6 and will change again before flashrom 1.0.
+
+Usage: flashrom [-h|-R|-L|-p <programmername>[:<parameters>] [-c <chipname>]
+[-E|(-r|-w|-v) <file>] [(-l <layoutfile>|--ifd) [-i <imagename>]...] [-n] [-N] [-f]]
+[-V[V[V]]] [-o <logfile>]
+
+ -h | --help                        print this help text
+ -R | --version                     print version (release)
+ -r | --read <file>                 read flash and save to <file>
+ -w | --write <file>                write <file> to flash
+ -v | --verify <file>               verify flash against <file>
+ -E | --erase                       erase flash memory
+ -V | --verbose                     more verbose output
+ -c | --chip <chipname>             probe only for specified flash chip
+ -f | --force                       force specific operations (see man page)
+ -n | --noverify                    don't auto-verify
+ -N | --noverify-all                verify included regions only (cf. -i)
+ -l | --layout <layoutfile>         read ROM layout from <layoutfile>
+      --ifd                         read layout from an Intel Firmware Descriptor
+ -i | --image <name>                only flash image <name> from flash layout
+ -o | --output <logfile>            log output to <logfile>
+ -L | --list-supported              print supported devices
+ -p | --programmer <name>[:<param>] specify the programmer device. One of
+    dummy, ft2232_spi, serprog, buspirate_spi, dediprog, pony_spi,
+    usbblaster_spi, pickit2_spi, ch341a_spi.
+
+You can specify one of -h, -R, -L, -E, -r, -w, -v or no operation.
+If no operation is specified, flashrom will only probe for flash chips.
+```
+* Flashrom to write BIOS binary into SPI flash
+```
+➜  time flashrom -p serprog:dev=/dev/tty.usbserial-A100NEXI:115200 -w 7175_t1.ROM -c "MX25L1605A/MX25L1606E/MX25L1608E"
+flashrom v1.0 on Darwin 17.6.0 (x86_64)
+flashrom is free software, get the source code at https://flashrom.org
+
+Calibrating delay loop... OK.
+serprog: Programmer name is "frser-duino"
+Found Macronix flash chip "MX25L1605A/MX25L1606E/MX25L1608E" (2048 kB, SPI) on serprog.
+Reading old flash chip contents... done.
+Erasing and writing flash chip... Erase/write done.
+Verifying flash... VERIFIED.
+flashrom -p serprog:dev=/dev/tty.usbserial-A100NEXI:115200 -w 7175_t1.ROM -c   4.54s user 1.77s system 1% cpu 6:39.01 total
+```
 ## OS
 ### Grub black screen issue
 ### Linux black screen issue
@@ -249,15 +318,6 @@ DB25/PIN	MAX3243E-2	PIN	MAX3243E-2	PIN	IT8181/6E	PIN
 ## M7072
 * System Spec/Manual: [TBE-M7072](TopStar-M7072-SPEC.md)
 * PCBA image
-
-![M7072-USB3-1](img/M7072_IMG_3025_small.jpg)
-
-[M7072-USB3-1_Large](img/M7072_IMG_3025.jpg)
-
-![M7072-USB3-2](img/M7072_IMG_3026_small.jpg)
-
-[M7072-USB3-2_Large](img/M7072_IMG_3026.jpg)
-
 * BIOS: SD-M7072-J
 
 
