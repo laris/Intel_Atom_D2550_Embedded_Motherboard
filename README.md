@@ -166,6 +166,18 @@ GRUB_CMDLINE_LINUX_DEFAULT="gma500_gfx.blacklist=yes"
 [SPI flash MX25L1606E](ds_it87_rs232/MX25L1606E.pdf)
 ### IT87 TTL map to RS232
 ![IT87 TTL map to RS232](img/D2550-IT87-TTL-map-RS232-MAX3243E.png)
+![IT8786E chip pin map](img/IT8786E-PIN-MAP.png)
+* TTL mapping
+
+IT87|MF243|linux dev|Note
+----|----|----|-----
+|S1|CHIP-1|ttyS0|
+|S2|CHIP-2|ttyS1|
+|S3|CHIP-3|ttyS3|
+S4|
+S5|
+
+
 ```
 GND 3/20/24
 VCC5V 10
